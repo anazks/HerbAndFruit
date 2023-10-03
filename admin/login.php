@@ -82,23 +82,21 @@ span.psw {
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="name" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="name" placeholder="Enter Password" name="psw" required>
         
     <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+   
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+  <a href="../"> <button type="button" class="cancelbtn" >Cancel</button></a>
+    
+   
   </div>
 </form>
-
     <?php
     session_start();
 
@@ -132,7 +130,11 @@ span.psw {
 $conn->close();
         ?>
 
-
+<script>
+      function cancel(){
+        document.getElemetById("name").value = ""
+      }
+  </script>
 
 </body>
 </html>
